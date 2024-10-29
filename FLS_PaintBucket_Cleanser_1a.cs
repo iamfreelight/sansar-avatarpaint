@@ -59,8 +59,8 @@ public class FLS_PaintBucket_Cleanser_1a : SceneObjectScript
 	}	
 
 	public class AvatarMatsData {
-		public Sansar.Color[] origMatColors = new Sansar.Color[2048];
-		public float[] origMatEmiss = new float[2048];
+		public Sansar.Color[] origMatColors = new Sansar.Color[256];
+		public float[] origMatEmiss = new float[256];
 	}
 
 	private List<Tuple<ObjectId, AvatarMatsData>> AMD = new List<Tuple<ObjectId, AvatarMatsData>>();
