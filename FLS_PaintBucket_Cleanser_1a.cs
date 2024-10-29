@@ -174,7 +174,7 @@ public class FLS_PaintBucket_Cleanser_1a : SceneObjectScript
 						}
 					}
 				} catch {
-					if (DebugMode == true) Log.Write("OnTriggerClean() - Exception 1 ");
+					if (DebugMode == true) Log.Write("OnTriggerClean() - Exception 2 ");
 				}
 			} else {
 			}
