@@ -25,7 +25,7 @@ public class FLS_PaintBucket_Paint_1a : SceneObjectScript
 
 	[DisplayName("Randomize All Materials")]
 	[Tooltip("When set to True the script will randomize the Tint and increase emissiveness on each of the avatar's materials seperately, via OnTrigger; When set to false, ColorizeColor will be used on all of the avatar's materials when activated via OnTrigger")]
-	[DefaultValue(true)]
+	[DefaultValue(false)]
 	public bool rgbMode = false;
 
 	[DisplayName("Paint Avatar Trigger")]
