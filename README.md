@@ -34,9 +34,8 @@ This script restores avatars' original colors and emissive properties when they 
 
 ## How to Use
 1. Set up trigger volumes in your scene.
-   - **Paint Trigger Volume**: Assign `FLS_PaintBucket_Paint_1a` to objects in the scene, and slot in a TriggerVolume for each, where avatars can get "painted" the colors you select on each script
-   - **Cleansing Trigger Volume**: Assign `FLS_PaintBucket_Cleanser_1a` to a designated "rinse" area object, Copy/Paste (slot in) a TriggerVolume for it, as well as a TriggerVolume that takes up the entire painting area, scene, or spawnpoint of the scene.
-2. Configure the color and emissive level in the `FLS_PaintBucket_Paint_1a` scripts and the cleansing speed in the `FLS_PaintBucket_Cleanser_1a` script.
+   - **Paint Trigger Volumes**: Assign `FLS_PaintBucket_Paint_1a` to objects in the scene, and slot in a TriggerVolume for each, where avatars can get "painted" the colors you select on each script with various settings
+   - **Cleansing Trigger Volumes**: Assign `FLS_PaintBucket_Cleanser_1a` to a designated "rinse" area object, then Copy/Paste Reference (slot in) a TriggerVolume for the rbTriggerCleanserArea on this script;  Also slot in a TriggerVolume entry for rbTriggerSpawnPoint that takes up the entire painting area, scene, or on the spawnpoint of the scene about the size of an avatar -- my personal preference is the entire painting area or the entire scene.
 
 -> That's pretty much it!
 
