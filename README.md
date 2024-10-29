@@ -2,7 +2,7 @@
 
 This repository provides a Sansar scripting demo, "AvatarPaint," which allows avatars to appear painted with a specific color or be randomly colorized on a per-material basis. This effect is triggered by avatar interactions with designated trigger volumes, and avatars can be "cleansed" of the effect in a separate cleansing area. The demo provides two main scripts:
 
-![Screenshot of AvatarPaint in Sansar](screenshot1.jpg)
+![Screenshot of AvatarPaint in Sansar](screenshot1.png)
 
 1. **FLS_PaintBucket_Paint_1a.cs** - Applies a color or random tint to avatars when they enter a paint trigger volume.
 2. **FLS_PaintBucket_Cleanser_1a.cs** - Restores avatars' original material properties when they enter the cleansing area trigger volume.
@@ -38,5 +38,5 @@ This script restores avatars' original colors and emissive properties when they 
 3. Drop these scripts onto respective volumes in your scene to create the interactive avatar "painting" and "cleansing" experience.
 
 ## Demo
-A pre-configured demo is available for free download on the Sansar store: [AvatarPaint Demo](https://store.sansar.com/freelight).
-This demo is also setup in my Sansar world '[Scripting Experiments]()'
+A pre-configured demo is available for free download on the Sansar store: [AvatarPaint Demo](https://store.sansar.com/listings/d6bfe4f3-1221-4ad6-8cfc-ba3d9211d318/fls-avatarpaint-demo-v01a).
+This demo is also setup in my Sansar world '[Scripting Experiments](https://atlas.sansar.com/experiences/freelight-1030/empty)'
