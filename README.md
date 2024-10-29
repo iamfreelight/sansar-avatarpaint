@@ -34,10 +34,11 @@ This script restores avatars' original colors and emissive properties when they 
 
 ## How to Use
 1. Set up trigger volumes in your scene.
-   - **Paint Trigger Volume**: Assign `FLS_PaintBucket_Paint_1a` to volumes where avatars can get "painted."
-   - **Cleansing Trigger Volume**: Assign `FLS_PaintBucket_Cleanser_1a` to a designated "rinse" area.
-2. Configure the color and emissive level in the `FLS_PaintBucket_Paint_1a` script and the cleansing speed in the `FLS_PaintBucket_Cleanser_1a` script.
-3. Copy/paste references to the various TriggerVolume slots on the scripts, to create the interactive avatar "painting" and "cleansing" experience.
+   - **Paint Trigger Volume**: Assign `FLS_PaintBucket_Paint_1a` to objects in the scene, and slot in a TriggerVolume for each, where avatars can get "painted" the colors you select on each script
+   - **Cleansing Trigger Volume**: Assign `FLS_PaintBucket_Cleanser_1a` to a designated "rinse" area object, Copy/Paste (slot in) a TriggerVolume for it, as well as a TriggerVolume that takes up the entire painting area, scene, or spawnpoint of the scene.
+2. Configure the color and emissive level in the `FLS_PaintBucket_Paint_1a` scripts and the cleansing speed in the `FLS_PaintBucket_Cleanser_1a` script.
+
+-> That's pretty much it!
 
 ## Demo
 A pre-configured demo is available for free download on the Sansar store: [AvatarPaint Demo](https://store.sansar.com/listings/d6bfe4f3-1221-4ad6-8cfc-ba3d9211d318/fls-avatarpaint-demo-v01a).
