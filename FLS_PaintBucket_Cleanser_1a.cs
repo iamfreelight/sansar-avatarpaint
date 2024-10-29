@@ -160,7 +160,8 @@ public class FLS_PaintBucket_Cleanser_1a : SceneObjectScript
 					if (avatarMatsData != null) {
 						MeshComponent mc = null;
 						ScenePrivate.FindObject(agentObjId).TryGetComponent(0, out mc);					
-						
+						mc.SetIsVisible(true);
+      
 						if (mc != null) {
 							List<RenderMaterial> materials2 = mc.GetRenderMaterials().ToList();
 							for (int j = 0; j < materials2.Count; j++)
