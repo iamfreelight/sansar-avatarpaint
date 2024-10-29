@@ -39,7 +39,7 @@ public class FLS_PaintBucket_Cleanser_1a : SceneObjectScript
 	[Tooltip("The delay (in seconds), the duration of how long the 'cleansing' fades in, or rather the 'paint' fading away.. when triggering cleansing for themselves")]
 	[DisplayName("Cleaning Speed")]
 	[DefaultValue(5.0f)]
-	public float cleanSpeed = 0.0001f;	
+	public float cleanSpeed = 5.0f;	
 
 	public interface ISimpleData
 	{
