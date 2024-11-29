@@ -40,5 +40,5 @@ This script restores avatars' original colors and emissive properties when they 
 -> That's pretty much it!
 
 ## Demo
-A pre-configured demo is available for free download on the Sansar store: [AvatarPaint Demo](https://store.sansar.com/listings/d6bfe4f3-1221-4ad6-8cfc-ba3d9211d318/fls-avatarpaint-demo-v01a).
+A pre-configured demo is available for free download on the Sansar store: [AvatarPaint Demo](https://store.sansar.com/listings/f2c39206-18d1-4379-a84f-ba9d220a9ae8/avatarpaint-demo-v01b).
 This demo is also setup in my Sansar world '[Scripting Experiments](https://atlas.sansar.com/experiences/freelight-1030/empty)'
