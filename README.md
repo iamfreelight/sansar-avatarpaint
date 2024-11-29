@@ -1,6 +1,6 @@
 # AvatarPaint - Sansar Scripting Demo
 
-This repository provides a Sansar scripting demo, "AvatarPaint" aka "PaintBucket", which allows avatars to appear painted with a specific color or be randomly colorized on a per-material basis. This effect is triggered by avatar interactions with designated trigger volumes, and avatars can be "cleansed" of the effect in a separate cleansing area. The demo provides two main scripts:
+This repository provides a Sansar scripting demo, "AvatarPaint", which allows avatars to appear painted with a specific color or be randomly colorized on a per-material basis. This effect is triggered by avatar interactions with designated trigger volumes, and avatars can be "cleansed" of the effect in a separate cleansing area. The demo provides two main scripts:
 
 ![Screenshot of AvatarPaint in Sansar Editor](screenshot1.png)
 ![Screenshot of Freelight painted completely red in Sansar using AvatarPaint scripts](screenshot2.png)
