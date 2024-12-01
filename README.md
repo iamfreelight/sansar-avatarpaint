@@ -6,14 +6,10 @@ This repository provides a Sansar scripting demo, "AvatarPaint", which allows av
 ![Screenshot of Freelight painted completely red in Sansar using AvatarPaint scripts](screenshot2.png)
 ![Screenshot of AvatarPaint's script properties in Sansar Editor](scriptprops_1c.png)
 
-### Repository
-
-- **Repository Name:** [sansar-avatarpaint](https://github.com/iamfreelight/sansar-avatarpaint)
-
 ## Scripts Overview
 
 ### FLS_AvatarPaint_PaintBucket_1c.cs
-This script applies color or random tint to avatars upon entering the specified paint trigger volume, or random colors per material when entering the .  The script also script restores avatars' original colors and emissive properties when they enter the cleansing area trigger volume.
+This script applies color or random tint to avatars upon entering the specified paint trigger volumes, or random colors per material when entering the RgbTrigger.  The script also script restores avatars' original colors and emissive properties when they enter the cleansing area trigger volume.
 
 - **Features**:
   - `RgbTrigger` (Trigger): If slotted, each avatar material is tinted a different random color when entering this trigger.
