@@ -4,7 +4,7 @@ This repository provides a Sansar scripting demo, "AvatarPaint", which allows av
 
 ![Screenshot of AvatarPaint in Sansar Editor](screenshot.png)
 ![Screenshot of Freelight painted completely red in Sansar using AvatarPaint scripts](screenshot2.png)
-![Screenshot of AvatarPaint's script properties in Sansar Editor](scriptprops_1c.png)
+![Screenshot of AvatarPaint's script properties in Sansar Editor](scriptprops__1c.png)
 
 ## Scripts Overview
 
