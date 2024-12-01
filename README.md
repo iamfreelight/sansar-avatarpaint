@@ -8,7 +8,7 @@ This repository provides a Sansar scripting demo, "AvatarPaint", which allows av
 
 ## Scripts Overview
 
-### FLS_AvatarPaint_PaintBucket_1c.cs
+### FLS_AvatarPaint_1c.cs
 This script applies color or random tint to avatars upon entering the specified paint trigger volumes, or random colors per material when entering the RgbTrigger.  The script also script restores avatars' original colors and emissive properties when they enter the cleansing area trigger volume.
 
 - **Features**:
@@ -20,7 +20,7 @@ This script applies color or random tint to avatars upon entering the specified 
 
 ## How to Use
 1. Set up trigger volumes in your scene, attach them to  the script, and pick colors for each one
-   - **Paint Trigger Volumes**: Assign `FLS_AvatarPaint_PaintBucket_1b` to objects in the scene, and slot them into the 'Paint Avatar Triggers' list, next define the same number of entries in the 'Paint Avatar Colors'   list and define a color for each, the entry # on each list allows each color entry to correspond with each TriggerVolume
+   - **Paint Trigger Volumes**: Assign `FLS_AvatarPaint_1c` script to the group of your trigger/bucket objects in the scene, and slot them into the 'Paint Avatar Triggers' list, next define the same number of entries in the 'Paint Avatar Colors'   list and define a color for each, the entry # on each list allows each color entry to correspond with each TriggerVolume
    - **RgbTrigger**: Copy/Paste a reference (slot in) a TriggerVolume if you want one to do a rainbow (random color per material) effect to the avatar when this trigger is entered
    - **Cleansing Trigger Volume**: Copy/Paste a reference (slot in) a TriggerVolume for the CleanserAreaTrigger on this script, this trigger allows the user to be 'cleansed' of the colorized tint effect on their avatar
 
