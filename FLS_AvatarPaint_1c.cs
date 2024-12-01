@@ -91,33 +91,33 @@ public class FLS_AvatarPaint_1c : SceneObjectScript
 	}
 	
 	public override void Init() {
-        if (PaintTriggers == null || PaintTriggers.Count == 0)
-        {
-            Log.Write("No triggers defined, script disabled");
-            return;
-        }	
+	        if (PaintTriggers == null || PaintTriggers.Count == 0)
+	        {
+	            Log.Write("No triggers defined, script disabled");
+	            return;
+	        }	
 		
 		if (PaintTriggers == null || PaintTriggers.Count == 0)
 		{
-            Log.Write("Number of entries for painting triggers vs # of entries of colors do not match in length, script disabled.");
-            return;			
+	            Log.Write("Number of entries for painting triggers vs # of entries of colors do not match in length, script disabled.");
+	            return;			
 		}
 	
-        for (int i = 0; i < PaintTriggers.Count; i++)
-        {
-            // Capture index for use in the event handler
-            int index = i;
-
-            // Check if the trigger is valid
-            if (PaintTriggers[index] != null)
-            {
-                PaintTriggers[index].Subscribe(CollisionEventType.Trigger, (CollisionData data) => OnTrigger(data, index));
-            }
-            else
-            {
-                Log.Write($"Trigger at index {index} is null.");
-            }
-        }
+	        for (int i = 0; i < PaintTriggers.Count; i++)
+	        {
+	            // Capture index for use in the event handler
+	            int index = i;
+	
+	            // Check if the trigger is valid
+	            if (PaintTriggers[index] != null)
+	            {
+	                PaintTriggers[index].Subscribe(CollisionEventType.Trigger, (CollisionData data) => OnTrigger(data, index));
+	            }
+	            else
+	            {
+	                Log.Write($"Trigger at index {index} is null.");
+	            }
+	        }
 		
 		if (CleanserAreaTrigger != null) CleanserAreaTrigger.Subscribe(CollisionEventType.Trigger, OnTriggerClean);
 		if (RgbTrigger != null) RgbTrigger.Subscribe(CollisionEventType.Trigger, OnTriggerRGB);
@@ -170,7 +170,8 @@ public class FLS_AvatarPaint_1c : SceneObjectScript
 				sd.SourceObjectId = ObjectPrivate.ObjectId;
 				agentObjId = sd.AgentInfo.ObjectId;
 				
-				if (agentObjId != null) {
+				if (agentObjId != null)
+    				{
 					MeshComponent mc = null;
 					ScenePrivate.FindObject(agentObjId).TryGetComponent(0, out mc);
 					bool isVisible = mc.GetIsVisible();
@@ -261,7 +262,7 @@ public class FLS_AvatarPaint_1c : SceneObjectScript
 	}
 	
 	private void OnUserJoin(UserData data)
-    {
+	{
 		try {
 			//save avatars original materials via OnUserJoin, so they can be restored when going inside the CleansingTrigger
 			AgentPrivate agent = ScenePrivate.FindAgent(data.User);
