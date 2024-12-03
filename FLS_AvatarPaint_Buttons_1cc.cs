@@ -98,52 +98,52 @@ public class FLS_AvatarPaint_Buttons_1cc : SceneObjectScript
 	}
 	
 	public override void Init() {
-        if (PaintButtons == null || PaintButtons.Count == 0)
-        {
-            Log.Write("No buttons slotted for interactions, script disabled");
-            return;
-        }	
-		
+	        if (PaintButtons == null || PaintButtons.Count == 0)
+	        {
+	            Log.Write("No buttons slotted for interactions, script disabled");
+	            return;
+	        }	
+			
 		if ((PaintButtons.Count != PaintColors.Count) || (PaintColors.Count != PaintButtonsPrompts.Count))
 		{
-            Log.Write("Number of entries for painting button volumes, vs. # of entries of colors, vs. prompt strings, the lists do not match in length, script disabled.");
-            return;			
+	            Log.Write("Number of entries for painting button volumes, vs. # of entries of colors, vs. prompt strings, the lists do not match in length, script disabled.");
+	            return;			
 		}
+			
+	        for (int i = 0; i < PaintButtons.Count; i++)
+	        {
+	            // Capture index for use in the event handler
+	            int index = i;
 	
-        for (int i = 0; i < PaintButtons.Count; i++)
-        {
-            // Capture index for use in the event handler
-            int index = i;
-
-            // Check if the volume is valid
-            if (PaintButtons[index] != null)
-            {
-				if (PaintButtons[index] != null && PaintButtons[index].IsValid)
-				{
-					ObjectPrivate op = ScenePrivate.FindObject(PaintButtons[index].ComponentId.ObjectId);
-					
-					if (op != null)
+	            // Check if the volume is valid
+	            if (PaintButtons[index] != null)
+	            {
+					if (PaintButtons[index] != null && PaintButtons[index].IsValid)
 					{
-						var result = WaitFor(op.AddInteraction, PaintButtonsPrompts[index], true) as ObjectPrivate.AddInteractionData;
-						if (result.Success)
+						ObjectPrivate op = ScenePrivate.FindObject(PaintButtons[index].ComponentId.ObjectId);
+						
+						if (op != null)
 						{
-							result.Interaction.Subscribe((InteractionData data) =>
-							{			
-								SimpleData sd = new SimpleData(this);
-								sd.SourceObjectId = ObjectPrivate.ObjectId;
-								sd.AgentInfo = ScenePrivate.FindAgent(data.AgentId)?.AgentInfo;
-								sd.ObjectId = sd.AgentInfo != null ? sd.AgentInfo.ObjectId : ObjectId.Invalid;
-								OnColorClick(sd.AgentInfo.ObjectId, index);
-							});
+							var result = WaitFor(op.AddInteraction, PaintButtonsPrompts[index], true) as ObjectPrivate.AddInteractionData;
+							if (result.Success)
+							{
+								result.Interaction.Subscribe((InteractionData data) =>
+								{			
+									SimpleData sd = new SimpleData(this);
+									sd.SourceObjectId = ObjectPrivate.ObjectId;
+									sd.AgentInfo = ScenePrivate.FindAgent(data.AgentId)?.AgentInfo;
+									sd.ObjectId = sd.AgentInfo != null ? sd.AgentInfo.ObjectId : ObjectId.Invalid;
+									OnColorClick(sd.AgentInfo.ObjectId, index);
+								});
+							}
 						}
-					}
-				}				
-            }
-            else
-            {
-                Log.Write($"Volume at index {index} is null.");
-            }
-        }
+					}				
+	            }
+	            else
+	            {
+	                Log.Write($"Volume at index {index} is null.");
+	            }
+	        }
 		
 		if (CleanserButton != null && CleanserButton.IsValid)
 		{
