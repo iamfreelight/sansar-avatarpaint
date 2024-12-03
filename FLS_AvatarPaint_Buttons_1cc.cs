@@ -118,26 +118,26 @@ public class FLS_AvatarPaint_Buttons_1cc : SceneObjectScript
 	            // Check if the volume is valid
 	            if (PaintButtons[index] != null)
 	            {
-					if (PaintButtons[index] != null && PaintButtons[index].IsValid)
+			if (PaintButtons[index] != null && PaintButtons[index].IsValid)
+			{
+				ObjectPrivate op = ScenePrivate.FindObject(PaintButtons[index].ComponentId.ObjectId);
+				
+				if (op != null)
+				{
+					var result = WaitFor(op.AddInteraction, PaintButtonsPrompts[index], true) as ObjectPrivate.AddInteractionData;
+					if (result.Success)
 					{
-						ObjectPrivate op = ScenePrivate.FindObject(PaintButtons[index].ComponentId.ObjectId);
-						
-						if (op != null)
-						{
-							var result = WaitFor(op.AddInteraction, PaintButtonsPrompts[index], true) as ObjectPrivate.AddInteractionData;
-							if (result.Success)
-							{
-								result.Interaction.Subscribe((InteractionData data) =>
-								{			
-									SimpleData sd = new SimpleData(this);
-									sd.SourceObjectId = ObjectPrivate.ObjectId;
-									sd.AgentInfo = ScenePrivate.FindAgent(data.AgentId)?.AgentInfo;
-									sd.ObjectId = sd.AgentInfo != null ? sd.AgentInfo.ObjectId : ObjectId.Invalid;
-									OnColorClick(sd.AgentInfo.ObjectId, index);
-								});
-							}
-						}
-					}				
+						result.Interaction.Subscribe((InteractionData data) =>
+						{			
+							SimpleData sd = new SimpleData(this);
+							sd.SourceObjectId = ObjectPrivate.ObjectId;
+							sd.AgentInfo = ScenePrivate.FindAgent(data.AgentId)?.AgentInfo;
+							sd.ObjectId = sd.AgentInfo != null ? sd.AgentInfo.ObjectId : ObjectId.Invalid;
+							OnColorClick(sd.AgentInfo.ObjectId, index);
+						});
+					}
+				}
+			}				
 	            }
 	            else
 	            {
