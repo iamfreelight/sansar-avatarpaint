@@ -285,7 +285,7 @@ public class FLS_AvatarPaint_Buttons_1cc : SceneObjectScript
 	}
 	
 	private void OnUserJoin(UserData data)
-    {
+   	{
 		try {
 			//save avatars original materials via OnUserJoin, so they can be restored when clicking the CleanserButton
 			AgentPrivate agent = ScenePrivate.FindAgent(data.User);
