@@ -97,7 +97,7 @@ public class FLS_AvatarPaint_1c : SceneObjectScript
 	            return;
 	        }	
 		
-		if (PaintTriggers == null || PaintTriggers.Count == 0)
+		if (PaintColors.Count != PaintTriggers.Count)
 		{
 	            Log.Write("Number of entries for painting triggers vs # of entries of colors do not match in length, script disabled.");
 	            return;			
